@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{% block head %}
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta charset="UTF-8" />
+        <title>{% block title %}RGMS - Raul Silva{% endblock %}</title>
+        <link rel="icon" href="{{ asset('favicon.jpg') }}">
+        {% block stylesheets %}
+
+            <link href="{{ asset('bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('css/base.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/step.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('css/header.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/search-container.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/hamburger-bar.css') }}" />
+
+            <link href='//fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+        {% endblock %}
+        {% block extraStylesheet %}{% endblock %}
+    </head>
+{% endblock %}
+<body>
+{% block javascripts %}
+    <script type="text/javascript" src = "{{ asset('js/jquery-2.2.4.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/jquery.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+    <script src="{{ asset('bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src = "{{ asset('js/navbar.js')}}"></script>
+    <script type="text/javascript" src = "{{ asset('js/hamburger-bar.js')}}"></script>
+    <script type="text/javascript" src = "{{ asset('js/base.js')}}"></script>
+    <script type="text/javascript" src = "{{ asset('js/search-container.js')}}"></script>
+
+{% endblock %}
+<div class="main-div">
+    {% block header %}{% endblock %}
+</div>
+
+{% block extraJS %}
+
+{% endblock %}
+</body>
+</html>

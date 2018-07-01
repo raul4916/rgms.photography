@@ -1,0 +1,45 @@
+{% extends "models/header.html.twig" %}
+
+{% block extraStylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}"/>
+{% endblock %}
+{% block content %}
+    <div class = main>
+        <div class = "step">
+            <div class = "step-content">
+                <div class = "bio-content flex-enable step-text-side">
+                    <img class = "photo-myself" src="{{ asset("img/photo-myself.jpg") }}">
+                    <div class = "biography-text flex-enable-column">
+                        <h2 class = "text-large-1 font-bold black-text">Who am I</h2>
+                        <p class = " black-text"> I am a Software Engineer with the goal of mixing my passion to technology and the art of photography.
+                            Innovating the Photography World is my goal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "step">
+            <div class = "step-content">
+                <div class = "bio-content flex-enable step-text-side">
+                    <img class = "photo-myself"src="{{ asset("img/myself-looking.jpg") }}">
+                    <div class = "biography-text flex-enable-column">
+                        <h2 class = "text-large-1 font-bold black-text">My Job</h2>
+                        <p class = " black-text">I do not have a specific focus in photography. Many photographers attempt to focus to a specific area such as wildlife,
+                            weddings and models. To me everything is unique and I attempt my best to find the best way to display it.
+                            Feel free to reach me for any kind of photos are needed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "step">
+            <div class = "step-content">
+                <div class = "bio-content flex-enable step-text-side">
+                    <img class = "photo-myself"src="{{ asset("img/camera-lens.jpg") }}">
+                    <div class = "biography-text flex-enable-column">
+                        <h2 class = "text-large-1 font-bold black-text">Hobbies</h2>
+                        <p class = " black-text"> Photography, Software Development, Video Gaming, Road Cycling and Volleyball are my passion. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

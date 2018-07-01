@@ -1,0 +1,70 @@
+{% extends "models/header.html.twig" %}
+
+{% block extraStylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/table.css') }}" />
+{% endblock %}
+
+{% block content %}
+    <div class = "albums">
+        <a  class = "content" href = "{{ app.request.getBaseURL() }}/album/view/category/wedding-ben-kaitlin">
+            <div id = "wedding-ben-kaitlin" class = "album">
+                <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Wedding - Ben and Kaitlin</h2></li>
+                </ul>
+            </div>
+        </a>
+
+        <a  class = "content" href = "{{ app.request.getBaseURL() }}/album/view/category/vietnamese">
+            <div id = "vietnamese" class = "album">
+                <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Vietnamese Tea Ceremony</h2></li>
+                </ul>
+            </div>
+        </a>
+
+        <a  class = "content" href = "{{ app.request.getBaseURL() }}/album/view/category/medieval">
+
+            <div id = "medieval" class = "album">
+                <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Medieval Festival</h2></li>
+                </ul>
+            </div>
+        </a>
+
+        <a class = "content" href = "{{ app.request.getBaseURL() }}/album/view/category/christmas">
+            <div class = "album"  id = "christmas">
+                <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Christmas</h2></li>
+                </ul>
+            </div>
+        </a>
+        <a class = "content"  href = "{{ app.request.getBaseURL() }}/album/view/category/food">
+            <div id = "food" class = "album">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Commercial Food Photography</h2></li>
+                </ul>
+            </div>
+        </a>
+
+        <a class = "content" href = "{{ app.request.getBaseURL() }}/album/view/category/florida">
+            <div id = "florida" class = "album">
+                <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Florida</h2></li>
+                </ul>
+            </div>
+        </a>
+
+        <a class = "content" href = "{{ app.request.getBaseURL() }}/album/view/category/dc">
+            <div id = "dc" class = "album">
+                <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation"><h2 class = "black-text">Washington, D.C</h2></li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript" src = "js/base.js"></script>
+{% endblock %}
+{% block extraJS %}
+    <script src="{{ asset('js/album-highlight.js')}}"></script>
+{% endblock  %}

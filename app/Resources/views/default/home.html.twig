@@ -1,0 +1,32 @@
+{% extends "models/header.html.twig" %}
+
+{% block extraStylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/table.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/image-viewer.css') }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class = main>
+        <div class="home-step-content-1 flex-enable-column flex-center bg-white">
+            <h2 class = "black-text">Portfolio</h2>
+            <div class="home table first-table"></div>
+        </div>
+        <div class = "home-step home-step-one">
+
+        </div>
+        <div class="home-step-content-1 flex-enable-column flex-center bg-white">
+            <h2 class = "black-text">Go Beyond the Pre-made Templates</h2>
+            <p class = "subtitle black-text">As a software engineer, there are limitless designs for your event page.<br> Make it unique and not just another</p>
+        </div>
+        <div class = "home-step home-step-two">
+
+        </div>
+        <div class = "home-step-content-1 flex-enable-column flex-center bg-white">
+            <h2 class = "black-text">Enjoy</h2>
+            <p class = "subtitle black-text">A moment like this only happens once, enjoy.  </p>
+        </div>
+    </div>
+    <script src="{{ asset('js/album-viewer.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,55 @@
+ .nav-tabs, .nav-pills {
+  float: right;
+  display: inline-block;
+  float: right;
+  > li > a{
+    &:hover,
+    &:focus{
+      color:black;
+      >span {
+        color: black;
+      }
+    }
+    > span {
+      color: white;
+    }
+    color:white;
+  }
+  &:active{
+
+  }
+}
+.nav-tabs > li, .nav-pills > li {
+  float:right;
+  font-family: SansSerif;
+  font-weight: bold;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  zoom:1; /* hasLayout ie7 trigger */
+  margin-top: 100px;
+  &.active > a {
+    &,
+    &:hover,
+    &:focus {
+      font-weight: bold;
+      border-color: black;
+      cursor: default;
+      background-color: black;
+    }
+  }
+  cursor: pointer;
+}
+
+.nav-tabs, .nav-pills {
+  text-align:center;
+  font-size: 300%;
+
+}
+.nav-holder{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}

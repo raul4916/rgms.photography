@@ -1,0 +1,96 @@
+.image-viewer{
+  background-color:black;
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.content-holder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-height: 100%;
+}
+
+.viewer-content{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.glyphicon-arrow-left,.glyphicon-arrow-right, .glyphicon-remove {
+  font-size: 500%;
+
+
+  height: 100%;
+  width: 30%;
+  z-index: 3;
+  -webkit-animation-name: getout ;
+  -moz-animation-name: getout ;
+  -o-animation-name: getout;
+  animation-name:  getout ;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+  &:hover{
+  }
+}
+.glyphicon-download{
+  display: none;
+  font-size: 500%;
+  transition: opacity .4s linear;
+  opacity: 1;
+  &:hover{
+    opacity: 1;
+  }
+}
+.glyphicon-remove {
+}
+.glyphicon-arrow-right{
+}
+.glyphicon-arrow-left{
+}
+.exit-viewer{
+  z-index: 0;
+  background-color: transparent;
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: auto;
+}
+@keyframes getout {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .2;
+  }
+}
+@keyframes getin {
+  100%{
+    opacity: 1;
+  }
+  0%{
+    opacity: .2;
+  }
+}

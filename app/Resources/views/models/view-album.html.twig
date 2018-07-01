@@ -1,0 +1,15 @@
+{% extends "models/header.html.twig" %}
+
+{% block extraStylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/table.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/image-viewer.css') }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="table first-table"></div>
+{% endblock %}
+
+{% block extraJS %}
+    <script src="{{ asset('js/album-viewer.js')}}"></script>
+{% endblock  %}

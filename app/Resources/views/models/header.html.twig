@@ -1,0 +1,100 @@
+{% extends "models/base.html.twig" %}
+
+{% block header %}
+    <div class = "content-div">
+        <div class = "search-container bg-black">
+            <div class = "search-group">
+                <div class="input-group">
+                    <input type="text" class="form-control input-search" placeholder="Search for...">
+                    <span class="input-group-btn">
+                             <button class="btn btn-default btn-search" type="button">Search</button>
+                        </span>
+                </div>
+                <ul class=" nav nav-pills flex-enable ">
+                    <li id = "category" class="active search-option-tab" ><a data-toggle="tab" href="#">Category</a></li>
+                    <li id = "client" class = "search-option-tab"><a data-toggle="tab" href="#">Client</a></li>
+                    <li id = "date" class = "search-option-tab"> <a data-toggle="tab" href="#">Date</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "hamburger-container bg-black">
+            <div>
+                <ul class="hamburger-nav nav nav-pills" role="tablist">
+                    <li class="search-button" role="presentation"><a ><span class="glyphicon glyphicon-search white-text"></span></a></li>
+                    <li role="presentation"><a href="{{ app.request.getBaseURL() }}/gallery" aria-controls="gallery">Gallery</a></li>
+                    <li role="presentation"><a href="{{ app.request.getBaseURL() }}/about" aria-controls="about-me">About me</a></li>
+                    <li role="presentation"><a href="#panel-footer"  data-target="#panel-footer">More Info</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class = "header">
+            <a href="{{ app.request.getBaseURL() }}/"><img class = "middle-logo" src = "{{ asset('img/rgms-nobg.png') }}" alt="RGMS"></a>
+            <!-- Nav tabs -->
+            <ul class="header-nav nav nav-pills" role="tablist">
+                <li class="hamburger-button" role="presentation"><a ><span class="glyphicon glyphicon-menu-hamburger white-text"></span></a></li>
+                <li class="nav-tab tab search-button" role="presentation"><a ><span class="glyphicon glyphicon-search white-text"></span></a></li>
+                <li class="nav-tab tab" role="presentation"><a href="#panel-footer"  data-target="#panel-footer">More Info</a></li>
+                <li class="nav-tab tab" role="presentation"><a href="{{ app.request.getBaseURL() }}/about" aria-controls="about-me">About me</a></li>
+                <li class="nav-tab tab" role="presentation"><a href="{{ app.request.getBaseURL() }}/gallery" aria-controls="gallery">Gallery</a></li>
+            </ul>
+
+
+            {#<div class = "search-collection">#}
+            {#<div class = "search-bar">#}
+            {#<div class="input-group">#}
+            {#<input type="text" class="form-control input-search" placeholder="Search for...">#}
+            {#<span class="input-group-btn">#}
+            {#<button class="btn btn-default btn-search" type="button">Search</button>#}
+            {#</span>#}
+            {#</div>#}
+            {#</div>#}
+            {#</div>#}
+            <div class = "header-content">
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+
+        {% block footer %}
+            <div id = "panel-footer" class = "panel-footer flex-enable-column" >
+                <div class = "site-details flex-enable-column">
+                    <a href="#contact-info" data-toggle="collapse" data-target="#contact-info" class="footer-btn black-text tab"><p class="subtitle">Contact</p></a>
+                    <div id="contact-info" class="subtitle collapse">
+                        <p class="subtitle ">Email: raul4916@gmail.com</p>
+                        <p class="subtitle ">Phone: (301)767-5095</p>
+                    </div>
+                    {#<div data-toggle="collapse" data-target="#tnc-info" class="footer-btn  tab"><p class="subtitle">Terms and Conditions</p></div>#}
+                    {#<div id="tnc-info" class="collapse">#}
+                        {#<p class="subtitle ">I collect your information only with your consent; I only collect the minimum amount of personal information that is necessary to fulfill the purpose of your interaction with me; I don't sell it to third parties; and I only use it as this Privacy Statement describes. </p>#}
+                        {#<a  href="{{ app.request.getBaseURL() }}/termsandconditions"><p class="subtitle">Click here for the full terms and conditions.</p></a>#}
+                    {#</div>#}
+                    {#<a  href="#refer-friend" data-toggle="collapse" data-target="#refer-friend" class="footer-btn black-text tab"><p class="subtitle">Refer to a Friend</p></a>#}
+                    {#<div id="refer-friend" class="subtitle collapse">#}
+                        {#<p class="subtitle ">Want to recommend me to someone? There will be up to 10% commission for you if your friend and I reach in an agreement.#}
+                            {#This does not apply to existing customers and it is for a limited time.</p>#}
+                    {#</div>#}
+                    {#<div data-toggle="collapse" data-target="#press-info" class="footer-btn  tab"><p class="subtitle">Press</p></div>#}
+                    {#<div id="press-info" class="collapse">#}
+                        {#<p class="subtitle ">Email: raul4916@gmail.com</p>#}
+                        {#<p class="subtitle ">Phone: (301)767-5095</p>#}
+                    {#</div>#}
+                    {#<div data-toggle="collapse" data-target="#credits" class="footer-btn  tab"><p class="subtitle">Credits</p></div>#}
+                    {#<div id="credits" class="collapse">#}
+                        {#<p class="subtitle "></p>#}
+                    {#</div>#}
+                    <a  href="#pricing" data-toggle="collapse" data-target="#pricing" class="footer-btn black-text tab"><p class="subtitle">Pricing</p></a>
+                    <div id="pricing" class="subtitle collapse">
+                        <p class="subtitle ">Contact me at raul4916@gmail.com for more information.</p>
+                    </div>
+                </div>
+                <div class = "social-media-footer flex-enable">
+                    <a href="https://www.instagram.com/rgms4916/" target="_blank"><img class = "social-media-logos" src="https://4.img-dpreview.com/files/p/articles/3759280259/instagram.jpeg"></a>
+                </div>
+
+            </div>
+        {% endblock %}
+
+    </div>
+{% endblock %}
+

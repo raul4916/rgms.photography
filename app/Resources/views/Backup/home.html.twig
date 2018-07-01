@@ -1,0 +1,44 @@
+{% extends "models/header.html.twig" %}
+
+{% block extraStylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class = "home-union home-first">
+        <div class="home-bar">
+                Welcome to the official site of RGMS Photography.
+                    Raul is an accomplished Software Engineer with a passion upon photography,
+                    who will be happy to mark the story of many.
+                    Raul is available for photography assignment and web development
+        </div>
+
+        <div class="home-bar">
+            <div class="home-tab">
+                <img class="home-image" src="{{ asset('img/christmas-patches.jpg') }}">
+                <div class="home-headline">Photograph the Story</div>
+            </div>
+        </div>
+
+        <div class="home-bar">
+            <div class="home-tab">
+                <img class="home-image-right" src="{{ asset('img/medieval-family.jpg') }}">
+                <div class="home-headline">Build the Story</div>
+
+
+
+            </div>
+        </div>
+
+        <div class="home-bar">
+
+            <div class="home-tab">
+                <img class="home-image" src="http://www.a1carpet-to.com/wp-content/uploads/2015/08/600x400.png">
+                <div class="home-headline">Display to Everyone</div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script type="text/javascript" src="js/base.js"></script>
+{% endblock %}

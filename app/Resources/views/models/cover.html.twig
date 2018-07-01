@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}RGMS - Raul Silva{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/cover.css') }}" />
+    {% endblock %}
+</head>
+<body>
+{% block javascripts %}
+    <script type="text/javascript" src = "js/jquery-2.2.4.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+{% endblock %}
+{% block cover %}
+    {#<div class = "layouts" >#}
+    {#<nav class="navbar navbar-default ">#}
+    {#<div class="container-fluid header-nav">#}
+    {#<div class = "dropdown navbar-header navbar-form navbar-right">#}
+    {#<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"#}
+    {#data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">#}
+    {#Account#}
+    {#<span class="caret"></span>#}
+    {#</button>#}
+    {#<ul class = "dropdown-menu" aria-labelledby="dropdown">#}
+    {#<li class="dropdown-header">Dropdown header</li>#}
+    {#</ul></div>#}
+    {#</div>#}
+    {#</nav>#}
+
+    <div>
+        <div class = "logo">
+            <div class="logo-font middle-logo">
+                <img class = "middle-logo" src = "{{ asset('img/rgms-nobg.png') }}" alt="RGMS" width="1000">
+
+            </div>
+        </div>
+        {% block tabs %}
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-layout " role="tablist">
+                    <li role="presentation"><a href="#galleries" aria-controls="galleries" role="tab" data-toggle="tab">Galleries</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li role="presentation"><a href="#about me" aria-controls="about me" role="tab" data-toggle="tab">About me</a></li>
+                    <li role="presentation"><a href="#trending" aria-controls="trending" role="tab" data-toggle="tab">Trending</a></li>
+                </ul>
+            </div>
+        {% endblock %}
+    </div>
+
+
+
+{% endblock %}
+</body>
+</html>

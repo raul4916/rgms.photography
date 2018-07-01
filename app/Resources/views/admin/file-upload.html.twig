@@ -1,0 +1,12 @@
+{% extends "models/header.html.twig" %}
+
+{% block content %}
+    <div>
+        <form enctype="multipart/form-data" action="{{ app.request.getBaseURL() }}/upload/image" method="post">
+            <input type="file" multiple="multiple" name="files[]">
+            Highlight:<input name="highlight" type="text"/>
+            Filter:<input name="filter" type="text"/>
+            <input id="sumbit" type="submit">
+        </form>
+    </div>
+{% endblock %}
